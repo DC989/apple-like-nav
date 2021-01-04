@@ -5,6 +5,6 @@ This Apple Nav Search Animation template keeps things simple, minimal and to the
 
 Built With:
   * HTML
-  * CSS
-  * jQuery
+  * CSS (Sass)
+  * JavaScript (jQuery)
   * Font Awesome
