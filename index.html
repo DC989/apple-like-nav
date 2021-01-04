@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apple style navigation menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="navigation__mobile-bar">
+            <div class="navigation__mobile-trigger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <nav class="navigation__menu">
+            <ul class="navigation__menu-list">
+                <li class="navigation__menu-list-item"><a href="#">Components</a></li>
+                <li class="navigation__menu-list-item"><a href="#">Gaming</a></li>
+                <li class="navigation__menu-list-item"><a href="#">Parts</a></li>
+                <li class="navigation__menu-list-item"><a href="#">Office Solutions</a></li>
+                <li class="navigation__menu-list-item"><a href="#">Networking</a></li>
+                <li class="navigation__menu-list-item"><a href="#">Electronics</a></li>
+                <li class="navigation__menu-list-item navigation__menu-list-item--search">
+                    <a href="#">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="navigation__search-container">
+                <div class="navigation__search-input">
+                    <form action="">
+                        <input type="text" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                        <button type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <a class="navigation__search-close" href="#">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <div class="navigation__search-menu">
+                    <h3>Quick Links</h3>
+                    <ul class="navigation__search-menu-list">
+                        <li class="navigation__search-menu-list-item"><a href="#">PC Builder</a></li>
+                        <li class="navigation__search-menu-list-item"><a href="#">Best Deals</a></li>
+                        <li class="navigation__search-menu-list-item"><a href="#">Track An Order</a></li>
+                        <li class="navigation__search-menu-list-item"><a href="#">Find Invoice</a></li>
+                        <li class="navigation__search-menu-list-item"><a href="#">Find Rebates</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation__fade-screen"></div>
+        </nav>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes specialFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes specialFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes specialFadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(10%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.navigation__mobile-bar {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.navigation__menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.navigation__menu-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navigation__menu-list-item {
+    &.is-closed {
+        animation-name: specialFadeIn;
+        animation-duration: 400ms;
+        animation-fill-mode: both;
+    }
+
+    &.is-hidden {
+        animation-name: specialFadeOut;
+        animation-duration: 500ms;
+        animation-fill-mode: both;
+    }
+}
+
+.navigation__menu-list-item:nth-child(1) {
+    &.is-closed {
+        animation-delay: 30ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 210ms;
+    }
+}
+
+.navigation__menu-list-item:nth-child(2) {
+    &.is-closed {
+        animation-delay: 60ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 190ms;
+    }
+}
+
+.navigation__menu-list-item:nth-child(3) {
+    &.is-closed {
+        animation-delay: 90ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 160ms;
+    }
+}
+
+.navigation__menu-list-item:nth-child(4) {
+    &.is-closed {
+        animation-delay: 110ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 130ms;
+    }
+}
+
+.navigation__menu-list-item:nth-child(5) {
+    &.is-closed {
+        animation-delay: 140ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 100ms;
+    }
+}
+
+.navigation__menu-list-item:nth-child(6) {
+    &.is-closed {
+        animation-delay: 170ms;
+    }
+
+    &.is-hidden {
+        animation-delay: 70ms;
+    }
+}
+
+.navigation__menu-list-item>a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        color: #969696;
+    }
+}
+
+.navigation__search-container {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+
+    a {
+        color: #fff;
+    }
+
+    form {
+        padding: 0 35px;
+    }
+
+    form input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 20px 15px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    form button {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+        font-size: 16px;
+        font-weight: 100;
+        color: #fff;
+    }
+
+    &.active {
+        display: block;
+        animation-name: specialFadeOut;
+    }
+}
+
+.navigation__search-input,
+.navigation__search-input form input {
+    position: relative;
+    animation-name: specialFadeInRight;
+    animation-duration: 400ms;
+    animation-fill-mode: both;
+    animation-delay: 500ms;
+}
+
+.navigation__search-close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 100;
+    animation-name: specialFadeIn;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+    animation-delay: 900ms;
+}
+
+.navigation__search-menu {
+    width: 100%;
+    min-width: 200px;
+    background: #fff;
+    padding: 25px 15px 20px;
+    color: #999;
+
+    h3 {
+        margin: 0 0 10px;
+        font-size: 14px;
+        font-weight: 400;
+        animation-name: specialFadeInRight;
+        animation-duration: 700ms;
+        animation-fill-mode: both;
+    }
+}
+
+.navigation__search-menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__search-menu-list-item {
+    display: block;
+    margin: 0 0 0 15px;
+    padding: 5px 0;
+    font-weight: 200;
+    text-align: left;
+    animation-name: specialFadeInRight;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+
+    &:nth-child(1) {
+        animation-delay: 0ms;
+    }
+
+    &:nth-child(2) {
+        animation-delay: 30ms;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 60ms;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 90ms;
+    }
+
+    &:nth-child(5) {
+        animation-delay: 120ms;
+    }
+
+    a {
+        display: inline-block;
+        padding: 5px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #999;
+
+        &:hover {
+            background-color: #d6d3d3;
+            color: #3392de;
+        }
+    }
+}
+
+.navigation__fade-screen {
+    background: rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    &--visible {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+
+        &__menu {
+            display: none;
+        }
+    }
+
+    .navigation__mobile-bar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body {
+        align-items: stretch;
+    }
+}
