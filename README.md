@@ -1,4 +1,4 @@
-![apple like navbar](https://raw.githubusercontent.com/DC989/apple-like-nav/main/apple-like-nav--cut.png)
+![apple like navbar](https://raw.githubusercontent.com/DC989/apple-like-nav/main/apple-style-nav--github-size.png)
 
 
 # apple-like-nav
